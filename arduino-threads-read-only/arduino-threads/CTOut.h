@@ -1,0 +1,47 @@
+
+/*******************************************************************
+ ctrun -- issues error messages for cheap threads
+
+ Copyright (C) 2001  Scott McKellar  mck9@swbell.net
+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+ ******************************************************************/
+
+#ifndef CTOUT_H_
+#define CTOUT_H_
+
+#include <stdlib.h>
+#include <stdio.h>
+#include "ct.h"
+#include "ctpriv.h"
+
+class CTOut {
+    
+    public:
+        
+        CTOut();
+        virtual ~CTOut();
+
+        /****************************************************************
+         Issue an error message, using the currently active error
+         reporter.
+         ***************************************************************/
+
+        static void ct_report_error(const char * msg);
+
+    };
+
+#endif /*CTOUT_H_*/
